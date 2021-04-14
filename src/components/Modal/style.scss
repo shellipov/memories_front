@@ -1,0 +1,52 @@
+.modal_background {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(34, 34, 34, 0.829);
+  .modal_window {
+    background: radial-gradient(rgb(236, 236, 236), #a1a1a1);
+    position: relative;
+    margin: 0 auto;
+    top: 15%;
+    width: 40%;
+    padding: 4rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    .close_button_container{
+      position: absolute;
+      top: 0;
+      right: 0;
+      button{
+        border-radius: 5px;
+      }
+    }
+    form{
+      width: 100%;
+      label{
+        display: flex;
+        flex-direction: column;
+        input{
+          margin: 0.2rem;
+          width: 100%;
+        }
+        .error{
+          font-size: small;
+          color:red;
+          margin-left: 1rem;
+        }
+      }
+    }
+
+  }
+}
+.animate__zoomIn {
+  --animate-duration: .2s;
+}
+.animate__zoomOut {
+  --animate-duration: .2s;
+}
+

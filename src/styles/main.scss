@@ -1,0 +1,31 @@
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+
+body {
+  height: 100vh;
+  // background-color: rgb(207, 207, 207);
+  background-image: url("../images/background.jpg");
+  img {
+    display: block;
+  }
+  section{
+    // background: linear-gradient(30deg, #f0d3c0, #e2e1c3); 
+    background: linear-gradient(30deg, #0c1c27e5, #260b2ee3); 
+
+  }
+  .loading_page{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .animate__zoomIn{
+    --animate-duration: .3s;
+  }
+  .fancybox-container{
+    z-index: 99999999999999999999999 !important;
+  }
+}

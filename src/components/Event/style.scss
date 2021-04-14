@@ -1,0 +1,82 @@
+.event_page {
+  padding: 2rem 0;
+  .event_component {
+    margin-top: 3rem;
+    padding: 0.1rem;
+    background-color: rgb(241, 241, 241);
+    border-radius: 7px;
+    .event_card_title {
+      background-color: rgb(171, 200, 250);
+      border-radius: 5px;
+      padding: 0 0.5rem;
+      button {
+        padding: 0;
+      }
+    }
+  }
+  .photo_container {
+    padding: 0.2rem;
+    .photo_title {
+      position: absolute;
+      margin-bottom: -4rem;
+      z-index: 2;
+      color: rgba(255, 255, 255, 0);
+      font-size: 0.8rem;
+    }
+    :hover {
+      color: #ffffff;
+      text-decoration: none;
+      text-shadow: 0 0 1em rgb(0, 0, 0);
+    }
+    .fancy_photo_block {
+      margin-top: 0.5rem;
+      height: 7.5rem;
+      overflow: hidden;
+      position: relative;
+      border-radius: 4px;
+      img {
+        position: absolute;
+        // z-index: -2;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+    }
+    .event_photo {
+      display: block;
+      width: 100%;
+    }
+    .button_image_block {
+      display: flex;
+      justify-content: center;
+      button {
+        position: relative;
+        color: rgba(255, 255, 255, 0);
+        margin-top: -2rem;
+        z-index: 2;
+      }
+      :hover {
+        color: #007bff;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0);
+      }
+    }
+  }
+  .add_photo_form {
+    margin-top: 0.5rem;
+    background-color: rgb(175, 175, 175);
+    height: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      span {
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+  }
+}
