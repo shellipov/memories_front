@@ -9,6 +9,7 @@ function LogIn() {
   const dispatch = useDispatch();
   const history = useHistory();
   const isAuth = useSelector((state) => state.auth.isAuth);
+  const error = useSelector((state) => state.auth.error);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -36,6 +37,7 @@ function LogIn() {
       </div>
       <div className="row justify-content-center">
         <form onSubmit={logIn} className="login_form">
+          <div>{error && <div className="login_page_error">{error}</div>}</div>
           <label>
             Почта
             <input
