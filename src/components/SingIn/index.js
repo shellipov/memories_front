@@ -9,7 +9,6 @@ function SingIn() {
   const dispatch = useDispatch();
   const history = useHistory();
   const iaAuth = useSelector((state) => state.auth.isAuth);
-  const error = useSelector((state) => state.auth.error);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",

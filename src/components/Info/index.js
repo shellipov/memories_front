@@ -11,7 +11,7 @@ function Info() {
       {" "}
       {!geocoderReverseData.data && (
         <div className=' info_page animate__animated animate__zoomIn'>
-          <h3>Как это работает ?</h3>
+          <h3>Как это работает&nbsp;?</h3>
           <p>
             {" "}
             - Чтобы поставить точку на карте наведите указатель мыши на нужное
