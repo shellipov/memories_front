@@ -9,6 +9,7 @@ function SingIn() {
   const dispatch = useDispatch();
   const history = useHistory();
   const iaAuth = useSelector((state) => state.auth.isAuth);
+  const fetcherror = useSelector((state) => state.auth.error);
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -47,7 +48,7 @@ function SingIn() {
       </div>
       <div className="row justify-content-center">
         <form onSubmit={singIn} className="login_form">
-          <div>{error && <div className="login_page_error">{error}</div>}</div>
+          <div>{fetcherror && <div className="login_page_error">{fetcherror}</div>}</div>
           <label>
             Почта
             <input
