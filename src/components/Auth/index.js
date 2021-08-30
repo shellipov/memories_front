@@ -11,7 +11,7 @@ function Auth() {
   const buttonName = loginVisible ? "Зарегистрироваться" : "Войти";
   return (
     <>
-      <div style={{ paddingTop: '70px'}} className="row">
+      <div style={{ paddingTop: '60px'}} className="row">
         <div className="col-md-6">
           <button
             className="btn btn-link btn-sm"

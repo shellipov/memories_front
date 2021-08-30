@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentEvent } from "../../redux/actions";
 import { getEventPhotos } from "../../api/backApi";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faEdit, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -82,7 +84,7 @@ function EventCard({ event }) {
                 dispatch(setCurrentEvent(null));
               }}
             >
-              X
+              <FontAwesomeIcon style icon={faTimesCircle} size="2x"/>
             </button>
           )}
         </div>
@@ -95,7 +97,7 @@ function EventCard({ event }) {
                 onClick={() => openEvent(event._id)}
                 className="btn btn-sm btn-link"
               >
-                Открыть
+                <FontAwesomeIcon icon={faEdit} size="2x"/>
               </button>
             </div>
             <div>

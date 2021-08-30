@@ -1,8 +1,10 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Map from "../Map";
 import EventsList from "../EventsList";
 import EventInfo from "../EventInfo";
-import CreateEvent from '../CreateEvent';
+import Search from "../Map/Parts/Search";
+import CreateEvent from "../CreateEvent";
+import Info from '../Info'
 import { loadEvents } from "../../redux/actions";
 import { useDispatch } from "react-redux";
 import "./style.scss";
@@ -15,22 +17,30 @@ function MainPage() {
   }, [dispatch]);
 
   return (
-    <section>
-      <div className="row justify-content-center">
-        <div className="col-md-6">
-          <div className="row justify-content-center align-items-center map-window">
-            <Map />
-            <EventInfo />
-          </div>
-        </div>
-        <div className="col-md-6">
-          <div className="row">
+    <>
+      <div className="main_page">
+        <Map className="map"></Map>
+        <div className="block block1">
+          <div className="content">
+            <div className="title">
+              <h2>События</h2>
+            </div>
             <EventsList />
           </div>
         </div>
+        <div className="search">
+          <Search />
+        </div>
+        <div className="block block3">
+          <div className="content">
+            <EventInfo />
+            <CreateEvent />
+            <Info />
+
+          </div>
+        </div>
       </div>
-      <CreateEvent/>
-    </section>
+    </>
   );
 }
 

@@ -6,8 +6,10 @@ import {
   tryGetEventPhoto,
   tryDeletePhoto,
 } from "../../../redux/actions/photoActions";
-
 import AddPhoto from "./AddPhoto";
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTrashAlt, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 // import "../style.scss";
 
 function EventPhoto() {
@@ -34,7 +36,7 @@ function EventPhoto() {
           {photos[0] &&
             photos.map((photo) => (
               <div key={photo._id} className="col-md-2">
-                <div className="photo_title">{photo.title}</div>
+                {/* <div className="photo_title">{photo.title}</div> */}
 
                 <div className="photo_block">
                   <a
@@ -52,6 +54,7 @@ function EventPhoto() {
                     </div>
                   </a>
                 </div>
+                
                 <div className="button_image_block">
                   <button
                     onClick={() => {
@@ -60,13 +63,13 @@ function EventPhoto() {
                     }}
                     className="btn btn-link btn-sm"
                   >
-                    Подробнее
+                    <FontAwesomeIcon className="btn-icon" icon={faInfoCircle} size="2x"/>
                   </button>
                   <button
                     onClick={() => deleteImage(photo._id)}
                     className="btn btn-link btn-sm"
                   >
-                    Удалить
+                    <FontAwesomeIcon icon={faTrashAlt} size="2x"/>
                   </button>
                 </div>
               </div>

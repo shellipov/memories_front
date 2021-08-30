@@ -44,11 +44,33 @@ function SingIn() {
   return (
     <>
       <div className="row justify-content-center">
-        <h2>Зарегистрироваться</h2>
+        <h2 style={{ color: 'white' }}>Зарегистрироваться</h2>
       </div>
       <div className="row justify-content-center">
         <form onSubmit={singIn} className="login_form">
           <div>{fetcherror && <div className="login_page_error">{fetcherror}</div>}</div>
+          <label>
+            Имя
+            <input
+              required
+              className="form-control form-control-sm"
+              type="text"
+              name="first_name"
+              onChange={(e) => changeInputValue(e)}
+              value={first_name}
+            />
+          </label>
+          <label>
+            Фамилия
+            <input
+              required
+              className="form-control form-control-sm"
+              type="text"
+              name="last_name"
+              onChange={(e) => changeInputValue(e)}
+              value={last_name}
+            />
+          </label>
           <label>
             Почта
             <input
@@ -82,28 +104,7 @@ function SingIn() {
               value={check_password}
             />
           </label>
-          <label>
-            Имя
-            <input
-              required
-              className="form-control form-control-sm"
-              type="text"
-              name="first_name"
-              onChange={(e) => changeInputValue(e)}
-              value={first_name}
-            />
-          </label>
-          <label>
-            Фамилия
-            <input
-              required
-              className="form-control form-control-sm"
-              type="text"
-              name="last_name"
-              onChange={(e) => changeInputValue(e)}
-              value={last_name}
-            />
-          </label>
+
           <div>{error}</div>
           <button className="btn btn-primary btn-sm" type="submit">
             Зарегистрироваться

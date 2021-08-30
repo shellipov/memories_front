@@ -33,7 +33,7 @@ function LogIn() {
   return (
     <>
       <div className="row justify-content-center">
-        <h2>Войти</h2>
+        <h2 style={{ color: 'white' }}>Войти</h2>
       </div>
       <div className="row justify-content-center">
         <form onSubmit={logIn} className="login_form">

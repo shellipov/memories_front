@@ -1,5 +1,10 @@
 .event_page {
   padding: 2rem 0;
+  height: calc(100vh - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
   .event_component {
     margin-top: 3rem;
     padding: 0.1rem;
@@ -26,14 +31,14 @@
     :hover {
       color: #ffffff;
       text-decoration: none;
-      text-shadow: 0 0 1em rgb(0, 0, 0);
     }
     .fancy_photo_block {
-      margin-top: 0.5rem;
+      // margin-top: 0.5rem;
       height: 7.5rem;
       overflow: hidden;
       position: relative;
       border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.082);
       img {
         position: absolute;
         // z-index: -2;
@@ -47,17 +52,17 @@
     }
     .button_image_block {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       button {
         position: relative;
         color: rgba(255, 255, 255, 0);
-        margin-top: -2rem;
+        margin-top: -7.5rem;
         z-index: 2;
       }
       :hover {
-        color: #007bff;
-        text-decoration: none;
-        text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0);
+        color: #ffffff;
+        background-color: rgba(204, 0, 0, 0.897)
+        // box-shadow: 0px 0px 2px black, 0 0 5px rgb(0, 0, 0);
       }
     }
   }
@@ -69,6 +74,7 @@
     flex-direction: column;
     justify-content: center;
     border-radius: 4px;
+
 
     label {
       display: flex;

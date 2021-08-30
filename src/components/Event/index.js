@@ -10,7 +10,7 @@ function Event() {
         <EventData style={{'margin-top': '6rem'}}/>
         <EventPhoto />
       </div>
-    </>
+    </> 
   );
 }
 

@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 // import MainPage from "./components/MainPage";
-import MainPage2 from "./components/MainPage2";
+import MainPage from "./components/MainPage";
 import Header from "./components/Header";
 import GetGeo from "./components/GetGeo";
 import Footer from "./components/Footer";
@@ -44,7 +44,7 @@ function App() {
     <Router>
       <GetGeo />
       <Header />
-      <Route exact path="/" component={MainPage2} />
+      <Route exact path="/" component={MainPage} />
 
       <section className="container">
         <Switch>

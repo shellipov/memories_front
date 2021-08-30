@@ -6,7 +6,7 @@ import {
 } from "../../redux/actions/photoActions";
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../Modal";
-import { Row, Button } from "react-bootstrap";
+import { Row, Button, Col } from "react-bootstrap";
 
 import Loading from "../Functions/Loading";
 
@@ -61,9 +61,14 @@ function OnePhotoPage() {
       {photo ? (
         <>
           <div  className="one_photo">
-            <Row>
+            {/* <Row>
               <Button style={{'margin-top': '5rem'}} onClick={exit}>Назад</Button>
-            </Row>
+            </Row> */}
+            <Col>
+                    <Button style={{'margin': '5rem 0 1rem'}} className="btn-secondary ml-5" onClick={exit}>
+                      ⏎
+                    </Button>
+                  </Col>
             <Row className="justify-content-center" >
               <a
                 className="customer fansy_link"
