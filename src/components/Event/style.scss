@@ -1,12 +1,11 @@
 .event_page {
-  padding: 2rem 0;
-  height: calc(100vh - 40px);
+  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow: scroll;
 
   .event_component {
-    margin-top: 3rem;
     padding: 0.1rem;
     background-color: rgb(241, 241, 241);
     border-radius: 7px;

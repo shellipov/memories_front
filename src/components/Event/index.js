@@ -6,7 +6,7 @@ import "./style.scss";
 function Event() {
   return (
     <>
-      <div  className='event_page animate__animated animate__zoomIn'>
+      <div  className='event_page animate__animated animate__zoomIn col'>
         <EventData style={{'margin-top': '6rem'}}/>
         <EventPhoto />
       </div>

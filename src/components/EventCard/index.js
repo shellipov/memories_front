@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentEvent } from "../../redux/actions";
 import { getEventPhotos } from "../../api/backApi";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faEdit, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import {faEdit, faTimesCircle, faArrowAltCircleRight, faArrowAltCircleLeft} from '@fortawesome/free-solid-svg-icons';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -19,7 +19,7 @@ function EventCard({ event }) {
     const { onClick } = props;
     return (
       <div className="arrowNext" onClick={onClick}>
-        {">>>"}
+        <FontAwesomeIcon className="text-white" icon={faArrowAltCircleRight} size="2x"/>
       </div>
     );
   }
@@ -28,7 +28,7 @@ function EventCard({ event }) {
     const { onClick } = props;
     return (
       <div className="arrowPrev" onClick={onClick}>
-        {"<<<"}
+        <FontAwesomeIcon className="text-white" icon={faArrowAltCircleLeft} size="2x"/>
       </div>
     );
   }
@@ -78,13 +78,13 @@ function EventCard({ event }) {
           </div>
           {currentEvent === event._id && (
             <button
-              className="btn btn-sm btn-link"
+              className="btn btn-sm btn-link text-danger"
               onClick={(e) => {
                 e.stopPropagation();
                 dispatch(setCurrentEvent(null));
               }}
             >
-              <FontAwesomeIcon style icon={faTimesCircle} size="2x"/>
+              <FontAwesomeIcon  icon={faTimesCircle} size="lg"/>
             </button>
           )}
         </div>
@@ -92,10 +92,10 @@ function EventCard({ event }) {
           <>
           <div className="animate__animated animate__zoomIn">
 
-            <div className=" row justify-content-center">
+            <div className=" row justify-content-center m-3">
               <button
                 onClick={() => openEvent(event._id)}
-                className="btn btn-sm btn-link"
+                className="btn btn-sm btn-link text-info"
               >
                 <FontAwesomeIcon icon={faEdit} size="2x"/>
               </button>

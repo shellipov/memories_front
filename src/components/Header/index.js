@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Route, Link, useHistory} from "react-router-dom";
-import Loading from "../Functions/Loading";
 import Error from "../Functions/Error";
 import { useSelector } from "react-redux";
 import "./style.scss";
@@ -17,7 +16,7 @@ function Header() {
   }, [iaAuth, history]);
 
   return (
-    <header>
+    <header className="col">
       <div className="row align-items-center">
         <div className="col lg-5">
           <div className="title">Memories</div>

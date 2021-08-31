@@ -52,7 +52,6 @@ function App() {
           <Route exact path="/photo:id" component={OnePhotoPage} />
           <Route exact path="/auth" component={Auth} />
           <Route exact path="/profile" component={Profile} />
-          {/* <Route exact path="/" component={MainPage} /> */}
           {isAuth ? (
             <>
               <Redirect to={"/"} />

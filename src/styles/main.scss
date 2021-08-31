@@ -3,19 +3,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 
 body {
-  height: 100vh;
-  // background-color: rgb(207, 207, 207);
+  min-height: 100vh;
   background-image: url("../images/background2.jpg");
   backdrop-filter: blur(5px);
+  overflow: hidden;
   img {
     display: block;
   }
-  section{
-    // background: linear-gradient(30deg, #f0d3c0, #e2e1c3); 
-    background: linear-gradient(30deg, #191a1be5, #232024e3); 
-
+  section {
+    background: linear-gradient(30deg, #191a1be5, #232024e3);
   }
-  .loading_page{
+  .loading_page {
     position: absolute;
     height: 100vh;
     width: 100vw;
@@ -23,10 +21,10 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .animate__zoomIn{
-    --animate-duration: .3s;
+  .animate__zoomIn {
+    --animate-duration: 0.3s;
   }
-  .fancybox-container{
+  .fancybox-container {
     z-index: 99999999999999999999999 !important;
   }
 }

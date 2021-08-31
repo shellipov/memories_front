@@ -1,7 +1,8 @@
 header {
   position: fixed;
   // top: 0;
-  width: 100%;
+  width: 100vw;
+  max-width:100vw;
   background: linear-gradient(30deg, #13547A, rgb(35, 59, 112)); 
   font-family: 'Amatic SC', cursive;
   color: white;
