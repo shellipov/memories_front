@@ -7,8 +7,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import Modal from "../Modal";
 import { Row, Button, Col } from "react-bootstrap";
-
 import Loading from "../Functions/Loading";
+import './style.scss'
 
 function OnePhotoPage() {
   const history = useHistory();
@@ -60,11 +60,8 @@ function OnePhotoPage() {
     <>
       {photo ? (
         <>
-          <div  className="one_photo">
-            {/* <Row>
-              <Button style={{'margin-top': '5rem'}} onClick={exit}>Назад</Button>
-            </Row> */}
-            <Col>
+          
+            <Col >
                     <Button style={{'margin': '5rem 0 1rem'}} className="btn-secondary ml-5" onClick={exit}>
                       ⏎
                     </Button>
@@ -103,12 +100,11 @@ function OnePhotoPage() {
                 placeholder="Описание"
               />
             </Row>
-            <Row>
+            <Row className="justify-content-center">
               {isChanges && (
                 <Button onClick={saveChanges}>Сохранить изменения</Button>
               )}
             </Row>
-          </div>
           <Modal
             visible={modalVisible}
             setVisible={setModalVisible}

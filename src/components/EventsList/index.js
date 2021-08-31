@@ -9,7 +9,7 @@ function EventList() {
   return (
     <>
       <div className="events_list animate__animated animate__zoomIn">
-        <h3>Мои события:</h3>
+        <h3>Воспоминания:</h3>
         {/* <div>
           <button className="btn btn-sm">Сортировать</button>{' '}
           <button className="btn btn-sm">Фильтр</button>
