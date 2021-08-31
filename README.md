@@ -1,4 +1,4 @@
-# Memories Front-end
+# Memories front
 
 ## Запуск программы: 
 
